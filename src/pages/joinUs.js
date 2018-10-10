@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import JionChild from './jion-child'
+import '../config'
 
 var myStyle = {
   fontSize: 30,
@@ -33,6 +34,7 @@ class JoinUs extends Component {
           <li>{this.state.provinceID}</li>
           <li>{this.cityID}</li>
           <li>{this.provinceID}</li>
+          <li>名称：{global.constants.name}</li>
         </ul>
       </div>
     );
