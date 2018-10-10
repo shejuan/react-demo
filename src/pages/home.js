@@ -6,14 +6,13 @@ let data = '显示首页的内容';
 
 class Home extends Component {
   myClick(val) {
-    console.log('我要进行的是路由传参', val)
     // var mypath = {
     //   pathname:'/jingli',
     //   query:{name:val},
     // }
 
     var mypath1 = {
-      pathname:'/jingli/',
+      pathname:'/jingli',
       state:{name:val},
     }
 
@@ -23,15 +22,14 @@ class Home extends Component {
     // }
     // list = JSON.stringify(list)
     // state，query这两种传递方式 都是不以明文在url 上进行传递 
-    this.props.history.push(mypath1) 
+    this.props.history.push(mypath1)
+
     // this.props.history.push(mypath)  
-    console.log(this.props, '----')
     // this.props.history.push(`/jingli/${list}`)
     this.getTopics()
   }
 
   async getTopics() {
-    console.log('1', api);
     try {
       let resultData = await api.demo.sendInfo({ page: 1, tab: 'ask' });
       console.log(resultData, 'get-----');
@@ -55,7 +53,9 @@ class Home extends Component {
       console.log(error);
     }
   }
-
+  componentWillMount(){
+    document.title = 'iiiii'
+  }
   render() {
     return (
       <div>

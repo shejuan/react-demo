@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import JionChild from './jion-child'
-import '../config'
+import '@/config'
 
 var myStyle = {
   fontSize: 30,
