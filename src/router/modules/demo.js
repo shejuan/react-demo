@@ -8,9 +8,6 @@ let routes = [
     name: 'home',
     path: '/',
     component: Home,
-    meta: {
-      title: '我是首页'
-    },
     exact: true
   },
   {
@@ -25,25 +22,16 @@ let routes = [
     name: 'course',
     path: '/course',
     component: Course,
-    meta: {
-      title: '我是Course'
-    }
   },
   {
     name: 'joinUs',
     path: '/joinUs',
     component: JoinUs,
-    meta: {
-      title: '我是JoinUs'
-    }
   },
   {
     name: 'jingli',
     path: '/jingli',
     component: Jingli,
-    meta: {
-      title: '我是Jingli'
-    }
   },
 ];
 
